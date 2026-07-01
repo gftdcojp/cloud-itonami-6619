@@ -9,6 +9,14 @@ chargeback — run by a qualified operator so a community keeps its own
 merchant and settlement ledgers instead of renting them from a closed
 processor.
 
+## Robotics premise
+
+All cloud-itonami verticals are designed on the premise that a **robot performs
+the physical domain work**. Here a card-fulfillment and ATM-servicing robot handles physical card and cash logistics under an actor that proposes
+actions and an independent **Card Settlement Governor** that gates them. The governor never
+dispatches hardware itself; `:high`/`:safety-critical` actions require
+human sign-off.
+
 ## Core Contract
 
 ```text
