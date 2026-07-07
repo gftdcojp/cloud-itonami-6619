@@ -1,4 +1,4 @@
-{:itonami.blueprint/id "cloud-itonami-6619"
+{:itonami.blueprint/id "cloud-itonami-isic-6619"
  :itonami.blueprint/name "Card Transaction Processing and Settlement"
  :itonami.blueprint/isic-rev5 "6619"
  :itonami.blueprint/domain :finance/card-settlement
@@ -8,4 +8,5 @@
  :itonami.blueprint/required-technologies [:card :banking :swift :identity :forms :dmn :bpmn :audit-ledger]
  :itonami.blueprint/optional-technologies [:optimization]
  :itonami.blueprint/status :public-oss
- :itonami.blueprint/robotics true}
+ :itonami.blueprint/robotics true
+ :itonami.blueprint/maturity :implemented}

@@ -2,7 +2,7 @@
 
 ## Classification
 
-- Repository: `cloud-itonami-6619`
+- Repository: `cloud-itonami-isic-6619`
 - ISIC Rev.5: `6619`
 - Activity: card transaction processing and settlement (auxiliary to financial services)
 - Social impact: financial inclusion, consumer protection, transparent fees
@@ -37,7 +37,12 @@
 ## Trust Controls
 
 - transactions with failed Luhn or declined authorization never settle
-- partial approvals never over-charge the granted amount
+- a fabricated jurisdiction citation, incomplete evidence, a
+  settlement amount over-charging the granted authorization, or an
+  unresolved fraud flag -- each forces a hold, not an override
 - chargebacks and reversals require governor approval
+- a transaction's settlement or chargeback hold cannot be finalized
+  twice: a double-finalization attempt is held off this actor's own
+  transaction facts alone, with no upstream comparison needed
 - raw PANs are never persisted — tokenization is mandatory at the edge
 - every authorize, clear, settle and disclose path is auditable
